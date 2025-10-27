@@ -24,6 +24,18 @@ import {
   Gavel
 } from 'lucide-react'
 
+// Importar imágenes
+import img1 from './images/slides/1.png'
+import img2 from './images/slides/2.jpg'
+import img3 from './images/slides/3.png'
+import img4 from './images/slides/4.png'
+import img5 from './images/slides/5.jpg'
+import imgTratado from './images/slides/TratadodelEspacioExterior.jpg'
+import imgAcuerdo from './images/slides/AcuerdodeRescate.jpg'
+import imgConvenio from './images/slides/ConvenioDeResponsabilidad.png'
+import imgRegistro from './images/slides/RegistroDeObjetosEspaciales.jpg'
+import imgLunar from './images/slides/RecursosLunares.jpg'
+
 // Componente para estrellas titilantes y flotantes
 function TwinklingStars() {
   const group1Ref = useRef()
@@ -173,7 +185,7 @@ function ImagePlaceholder({ src, alt, style = {}, className = "" }) {
         />
       ) : (
         <img 
-          src="src/images/slides/1.png" 
+          src={img1} 
           alt={alt || 'Imagen relacionada'}
           style={{
             width: '100%',
@@ -525,7 +537,7 @@ function OriginSlide() {
         
         <div style={{ flex: 1 }}>
           <ImagePlaceholder 
-          src={"src/images/slides/1.png"}
+          src={img1}
             alt="Sputnik 1 - Primer satélite artificial"
             style={{ width: '530px', height: '350px' }}
           />
@@ -726,12 +738,12 @@ function HistorySlide() {
           flexWrap: 'wrap'
         }}>
           <ImagePlaceholder 
-            src="src/images/slides/2.jpg"
+            src={img2}
             alt="Línea de tiempo espacial"
             style={{ width: '300px', height: '200px' }}
           />
           <ImagePlaceholder 
-            src="src/images/slides/3.png"
+            src={img3}
             alt="Evolución de la tecnología espacial"
             style={{ width: '300px', height: '200px' }}
           />
@@ -814,35 +826,35 @@ function TreatiesSlide() {
       title: 'Tratado del Espacio Exterior',
       description: 'Constitución cósmica básica',
       details: 'Establece que el espacio exterior, incluida la Luna y otros cuerpos celestes, es patrimonio común de la humanidad. Prohíbe la apropiación nacional, el emplazamiento de armas nucleares y establece que el espacio debe usarse solo para fines pacíficos.',
-      image: 'src/images/slides/TratadodelEspacioExterior.jpg'
+      image: imgTratado
     },
     {
       year: 1968,
       title: 'Acuerdo de Rescate',
       description: 'Rescate de astronautas',
       details: 'Obliga a los Estados a prestar asistencia a los astronautas en caso de accidente, peligro o aterrizaje no programado, considerando a los astronautas como enviados de la humanidad.',
-      image: 'src/images/slides/AcuerdodeRescate.jpg'
+      image: imgAcuerdo
     },
     {
       year: 1972,
       title: 'Convenio de Responsabilidad',
       description: 'Daños por objetos espaciales',
       details: 'Establece la responsabilidad absoluta de un Estado lanzador por los daños causados por sus objetos espaciales en la Tierra o en vuelo. El Estado lanzador es completamente responsable de cualquier daño causado por sus objetos espaciales.',
-      image: 'src/images/slides/ConvenioDeResponsabilidad.png'
+      image: imgConvenio
     },
     {
       year: 1975,
       title: 'Convenio de Registro',
       description: 'Registro de objetos espaciales',
       details: 'Requiere el registro en Naciones Unidas de todos los objetos lanzados al espacio exterior, proporcionando información sobre órbita, función y parámetros básicos. Mantiene un registro internacional de actividades espaciales.',
-      image: 'src/images/slides/RegistroDeObjetosEspaciales.jpg'
+      image: imgRegistro
     },
     {
       year: 1979,
       title: 'Acuerdo sobre la Luna',
       description: 'Recursos lunares',
       details: 'Declara que la Luna y sus recursos naturales son patrimonio común de la humanidad. Establece un régimen internacional para la explotación de recursos lunares cuando sea factible, aunque no ha sido ratificado por las principales potencias espaciales.',
-      image: 'src/images/slides/RecursosLunares.jpg'
+      image: imgLunar
     }
   ]
 
@@ -990,12 +1002,12 @@ function ApplicationsSlide() {
           marginTop: '1.5rem'
         }}>
           <ImagePlaceholder 
-            src="src/images/slides/4.png"
+            src={img4}
             alt="Cosmos 954 - Satélite soviético"
             style={{ width: '600px', height: '200px' }}
           />
           <ImagePlaceholder 
-            src="src/images/slides/5.jpg"
+            src={img5}
             alt="Mapa de impacto en Canadá"
             style={{ width: '300px', height: '200px' }}
           />
