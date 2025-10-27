@@ -525,6 +525,7 @@ function OriginSlide() {
         
         <div style={{ flex: 1 }}>
           <ImagePlaceholder 
+          src={"src/images/slides/1.png"}
             alt="Sputnik 1 - Primer satélite artificial"
             style={{ width: '530px', height: '350px' }}
           />
@@ -813,35 +814,35 @@ function TreatiesSlide() {
       title: 'Tratado del Espacio Exterior',
       description: 'Constitución cósmica básica',
       details: 'Establece que el espacio exterior, incluida la Luna y otros cuerpos celestes, es patrimonio común de la humanidad. Prohíbe la apropiación nacional, el emplazamiento de armas nucleares y establece que el espacio debe usarse solo para fines pacíficos.',
-      image: 'src/images/slides/treaty1.jpg'
+      image: 'src/images/slides/TratadodelEspacioExterior.jpg'
     },
     {
       year: 1968,
       title: 'Acuerdo de Rescate',
       description: 'Rescate de astronautas',
       details: 'Obliga a los Estados a prestar asistencia a los astronautas en caso de accidente, peligro o aterrizaje no programado, considerando a los astronautas como enviados de la humanidad.',
-      image: 'src/images/slides/treaty2.jpg'
+      image: 'src/images/slides/AcuerdodeRescate.jpg'
     },
     {
       year: 1972,
       title: 'Convenio de Responsabilidad',
       description: 'Daños por objetos espaciales',
       details: 'Establece la responsabilidad absoluta de un Estado lanzador por los daños causados por sus objetos espaciales en la Tierra o en vuelo. El Estado lanzador es completamente responsable de cualquier daño causado por sus objetos espaciales.',
-      image: 'src/images/slides/treaty3.jpg'
+      image: 'src/images/slides/ConvenioDeResponsabilidad.png'
     },
     {
       year: 1975,
       title: 'Convenio de Registro',
       description: 'Registro de objetos espaciales',
       details: 'Requiere el registro en Naciones Unidas de todos los objetos lanzados al espacio exterior, proporcionando información sobre órbita, función y parámetros básicos. Mantiene un registro internacional de actividades espaciales.',
-      image: 'src/images/slides/treaty4.jpg'
+      image: 'src/images/slides/RegistroDeObjetosEspaciales.jpg'
     },
     {
       year: 1979,
       title: 'Acuerdo sobre la Luna',
       description: 'Recursos lunares',
       details: 'Declara que la Luna y sus recursos naturales son patrimonio común de la humanidad. Establece un régimen internacional para la explotación de recursos lunares cuando sea factible, aunque no ha sido ratificado por las principales potencias espaciales.',
-      image: 'src/images/slides/treaty5.jpg'
+      image: 'src/images/slides/RecursosLunares.jpg'
     }
   ]
 
