@@ -35,6 +35,7 @@ import imgAcuerdo from './images/slides/AcuerdodeRescate.jpg'
 import imgConvenio from './images/slides/ConvenioDeResponsabilidad.png'
 import imgRegistro from './images/slides/RegistroDeObjetosEspaciales.jpg'
 import imgLunar from './images/slides/RecursosLunares.jpg'
+import imgQR from './images/slides/qr.png'
 
 // Componente para estrellas titilantes y flotantes
 function TwinklingStars() {
@@ -1584,6 +1585,31 @@ function App() {
         >
           Bibliografía
         </button>
+      </div>
+
+      {/* Overlay con QR (esquina inferior derecha) */}
+      <div style={{
+        position: 'absolute',
+        right: '20px',
+        bottom: '20px',
+        zIndex: 10,
+        background: 'rgba(0, 0, 0, 0.55)',
+        padding: '10px',
+        borderRadius: '12px',
+        border: '1px solid rgba(255, 255, 255, 0.12)',
+        boxShadow: '0 8px 20px rgba(0,0,0,0.35)'
+      }}>
+        <img
+          src={imgQR}
+          alt="QR"
+          style={{
+            display: 'block',
+            width: '210px',
+            height: '210px',
+            objectFit: 'contain',
+            filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.4))'
+          }}
+        />
       </div>
     </div>
   )
