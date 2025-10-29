@@ -158,8 +158,9 @@ function ImagePlaceholder({ src, alt, style = {}, className = "" }) {
     <div 
       className={`image-placeholder ${className}`}
       style={{
-        width: '300px',
-        height: '200px',
+        width: '100%',
+        maxWidth: '300px',
+        aspectRatio: '3 / 2',
         background: 'rgba(74, 144, 226, 0.1)',
         border: '2px dashed rgba(74, 144, 226, 0.5)',
         borderRadius: '15px',
@@ -446,7 +447,7 @@ function TitleSlide() {
           <Globe size={80} color="#4a90e2" style={{ marginBottom: '1rem' }} />
         </motion.div>
         <NeonText style={{
-          fontSize: '3.2rem', 
+          fontSize: 'clamp(2rem, 8vw, 3.2rem)', 
           marginBottom: '1rem',
           fontWeight: 'bold',
           display: 'inline-block'
@@ -454,7 +455,7 @@ function TitleSlide() {
           DERECHO ESPACIAL
         </NeonText>
         <h2 style={{ 
-          fontSize: '1.6rem', 
+          fontSize: 'clamp(1rem, 4vw, 1.6rem)', 
           color: '#a0a0a0',
           marginBottom: '2rem',
           fontWeight: '300',
@@ -539,7 +540,7 @@ function OriginSlide() {
           <ImagePlaceholder 
           src={img1}
             alt="Sputnik 1 - Primer satélite artificial"
-            style={{ width: '530px', height: '350px' }}
+            style={{ width: '100%', maxWidth: '530px', aspectRatio: '53 / 35' }}
           />
         </div>
       </div>
@@ -554,7 +555,7 @@ function WhatIsSpaceLawSlide() {
       <div style={{ maxWidth: '1100px', width: '100%', padding: '2rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <Scale size={60} color="#4a90e2" style={{ marginBottom: '1rem' }} />
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#4a90e2' }}>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 6vw, 2.5rem)', marginBottom: '1.5rem', color: '#4a90e2' }}>
             ¿Qué es el Derecho Espacial?
           </h2>
         </div>
@@ -660,7 +661,7 @@ function HistorySlide() {
       }}>
         <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
           <BookOpen size={60} color="#4a90e2" style={{ marginBottom: '1rem' }} />
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#4a90e2' }}>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 6vw, 2.5rem)', marginBottom: '1.5rem', color: '#4a90e2' }}>
             Breve historia y evolución
           </h2>
         </div>
@@ -740,12 +741,12 @@ function HistorySlide() {
           <ImagePlaceholder 
             src={img2}
             alt="Línea de tiempo espacial"
-            style={{ width: '300px', height: '200px' }}
+            style={{ width: '100%', maxWidth: '300px', aspectRatio: '3 / 2' }}
           />
           <ImagePlaceholder 
             src={img3}
             alt="Evolución de la tecnología espacial"
-            style={{ width: '300px', height: '200px' }}
+            style={{ width: '100%', maxWidth: '300px', aspectRatio: '3 / 2' }}
           />
         </div>
       </div>
@@ -768,7 +769,7 @@ function PrinciplesSlide() {
       <div style={{ maxWidth: '1100px', width: '100%', padding: '1rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <Shield size={60} color="#4a90e2" style={{ marginBottom: '1rem' }} />
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#4a90e2' }}>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 6vw, 2.5rem)', marginBottom: '1.5rem', color: '#4a90e2' }}>
             Principios fundamentales
           </h2>
         </div>
@@ -863,7 +864,7 @@ function TreatiesSlide() {
       <div style={{ maxWidth: '1000px', width: '100%', padding: '1rem', overflowX: 'hidden' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <BookOpen size={60} color="#4a90e2" style={{ marginBottom: '1rem' }} />
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#4a90e2' }}>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 6vw, 2.5rem)', marginBottom: '1.5rem', color: '#4a90e2' }}>
             Tratados internacionales clave
           </h2>
           <p style={{ fontSize: '1.1rem', color: '#a0a0a0' }}>Haz clic en cada tratado para ver detalles</p>
@@ -947,7 +948,7 @@ function ApplicationsSlide() {
       <div style={{ maxWidth: '1200px', width: '100%', padding: '1rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <Target size={60} color="#4a90e2" style={{ marginBottom: '1rem' }} />
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#4a90e2' }}>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 6vw, 2.5rem)', marginBottom: '1.5rem', color: '#4a90e2' }}>
             Aplicaciones prácticas
           </h2>
         </div>
@@ -1004,12 +1005,12 @@ function ApplicationsSlide() {
           <ImagePlaceholder 
             src={img4}
             alt="Cosmos 954 - Satélite soviético"
-            style={{ width: '600px', height: '200px' }}
+            style={{ width: '100%', maxWidth: '600px', aspectRatio: '3 / 1' }}
           />
           <ImagePlaceholder 
             src={img5}
             alt="Mapa de impacto en Canadá"
-            style={{ width: '300px', height: '200px' }}
+            style={{ width: '100%', maxWidth: '300px', aspectRatio: '3 / 2' }}
           />
         </div>
       </div>
@@ -1051,7 +1052,7 @@ function ChallengesSlide() {
         
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(2, 1fr)', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', 
           gap: '1.5rem',
           marginTop: '1rem'
         }}>
@@ -1105,7 +1106,7 @@ function FutureSlide() {
       <div style={{ maxWidth: '1100px', width: '100%', padding: '1rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <TrendingUp size={60} color="#4a90e2" style={{ marginBottom: '1rem' }} />
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#4a90e2' }}>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 6vw, 2.5rem)', marginBottom: '1.5rem', color: '#4a90e2' }}>
             Futuro del Derecho Espacial
           </h2>
         </div>
@@ -1177,7 +1178,7 @@ function ConclusionSlide() {
           <Users size={80} color="#4a90e2" style={{ marginBottom: '1rem' }} />
         </motion.div>
         <NeonText style={{
-          fontSize: '2.8rem', 
+          fontSize: 'clamp(1.8rem, 7vw, 2.8rem)', 
           marginBottom: '2rem',
           fontWeight: 'bold',
           display: 'inline-block'
@@ -1236,6 +1237,143 @@ function ConclusionSlide() {
   )
 }
 
+// Diapositiva 11: Bibliografía
+function BibliographySlide() {
+  const bibliography = [
+    {
+      title: 'UNOOSA – Space Law',
+      source: 'Oficina de Asuntos del Espacio Ultraterrestre de la ONU (UNOOSA)',
+      url: 'https://www.unoosa.org/oosa/en/ourwork/spacelaw/index.html'
+    },
+    {
+      title: 'Derecho espacial',
+      source: 'Wikipedia',
+      url: 'https://es.wikipedia.org/wiki/Derecho_espacial'
+    },
+    {
+      title: 'Sputnik 1',
+      source: 'NASA',
+      url: 'https://www.nasa.gov/image-article/sputnik-1/'
+    },
+    {
+      title: 'Carrera espacial',
+      source: 'Wikipedia',
+      url: 'https://es.wikipedia.org/wiki/Carrera_espacial'
+    },
+    {
+      title: 'Fundamentos del derecho espacial (PDF)',
+      source: 'Universidad de los Andes',
+      url: 'https://spacelaw.uniandes.edu.co/images/Fundamentos_del_derecho_espacial.pdf'
+    },
+    {
+      title: 'International Space Law Explained',
+      source: 'Naciones Unidas',
+      url: 'https://www.un.org/en/peace-and-security/international-space-law-explained'
+    },
+    {
+      title: 'Treaty on Principles Governing the Activities of States in the Exploration and Use of Outer Space (PDF)',
+      source: 'UNOOSA',
+      url: 'https://www.unoosa.org/pdf/publications/STSPACE11S.pdf'
+    },
+    {
+      title: 'Agreement Governing the Activities of States on the Moon and Other Celestial Bodies',
+      source: 'UNOOSA',
+      url: 'https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/intromoon-agreement.html'
+    },
+    {
+      title: 'Agreement on the Rescue of Astronauts, the Return of Astronauts and the Return of Objects Launched into Outer Space',
+      source: 'UNOOSA',
+      url: 'https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/introrescueagreement.html'
+    },
+    {
+      title: 'Convenio sobre la responsabilidad internacional por daños causados por objetos espaciales',
+      source: 'Wikipedia',
+      url: 'https://es.wikipedia.org/wiki/Convenio_sobre_la_responsabilidad_internacional_por_da%C3%B1os_causados_por_objetos_espaciales'
+    },
+    {
+      title: 'Convention on Registration of Objects Launched into Outer Space',
+      source: 'UNOOSA',
+      url: 'https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/registration-convention.html'
+    },
+    {
+      title: 'Moon Agreement',
+      source: 'UNOOSA',
+      url: 'https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/moon-agreement.html'
+    },
+    {
+      title: 'Cosmos 954',
+      source: 'Wikipedia',
+      url: 'https://es.wikipedia.org/wiki/Cosmos_954'
+    },
+    {
+      title: 'Flashback: Soviet satellite exploded, scattering nuclear debris over Canada',
+      source: 'Business Insider (2023, diciembre)',
+      url: 'https://www.businessinsider.com/flashback-soviet-satellite-exploded-scattering-nuclear-debris-over-canada-2023-12'
+    },
+    {
+      title: 'Minería espacial',
+      source: 'Colegio Oficial de Ingenieros Técnicos en Topografía (ICOG)',
+      url: 'https://www.icog.es/TyT/index.php/2016/11/mineria-espacial/'
+    },
+    {
+      title: 'Militarización del espacio',
+      source: 'Wikipedia',
+      url: 'https://es.wikipedia.org/wiki/Militarizaci%C3%B3n_del_espacio'
+    },
+    {
+      title: 'Colonización del espacio',
+      source: 'Wikipedia',
+      url: 'https://es.wikipedia.org/wiki/Colonizaci%C3%B3n_del_espacio'
+    },
+    {
+      title: 'Turismo espacial',
+      source: 'Wikipedia',
+      url: 'https://es.wikipedia.org/wiki/Turismo_espacial'
+    }
+  ]
+
+  return (
+    <Slide isActive={true} slideNumber={11} totalSlides={11}>
+      <div style={{ maxWidth: '1100px', width: '100%', padding: '1rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+          <BookOpen size={60} color="#4a90e2" style={{ marginBottom: '1rem' }} />
+          <h2 style={{ fontSize: 'clamp(1.6rem, 6vw, 2.5rem)', marginBottom: '0.5rem', color: '#4a90e2' }}>
+            Bibliografía
+          </h2>
+          <p style={{ fontSize: '1rem', color: '#a0a0a0' }}>Fuentes consultadas</p>
+        </div>
+
+        <div style={{
+          background: 'rgba(74, 144, 226, 0.1)',
+          padding: '1rem',
+          borderRadius: '15px',
+          border: '1px solid rgba(74, 144, 226, 0.3)',
+          maxHeight: '60vh',
+          overflowY: 'auto'
+        }}>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+            {bibliography.map((item, idx) => (
+              <li key={idx} style={{ marginBottom: '1rem' }}>
+                <div style={{ color: '#fff', fontSize: '1rem', marginBottom: '0.25rem' }}>
+                  {item.source}
+                </div>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#4a90e2', textDecoration: 'none', wordBreak: 'break-word' }}
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </Slide>
+  )
+}
+
 // Componente principal de la aplicación
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -1253,6 +1391,7 @@ function App() {
     { component: ChallengesSlide, duration: 45000 },
     { component: FutureSlide, duration: 45000 },
     { component: ConclusionSlide, duration: 30000 },
+    { component: BibliographySlide, duration: 60000 },
   ]
 
   const totalSlides = slides.length
@@ -1334,8 +1473,8 @@ function App() {
             background: 'rgba(74, 144, 226, 0.8)',
             border: 'none',
             borderRadius: '50%',
-            width: '50px',
-            height: '50px',
+            width: 'clamp(44px, 8vw, 50px)',
+            height: 'clamp(44px, 8vw, 50px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -1352,8 +1491,8 @@ function App() {
             background: isPlaying ? 'rgba(255, 99, 99, 0.8)' : 'rgba(99, 255, 99, 0.8)',
             border: 'none',
             borderRadius: '50%',
-            width: '50px',
-            height: '50px',
+            width: 'clamp(44px, 8vw, 50px)',
+            height: 'clamp(44px, 8vw, 50px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -1370,8 +1509,8 @@ function App() {
             background: 'rgba(74, 144, 226, 0.8)',
             border: 'none',
             borderRadius: '50%',
-            width: '50px',
-            height: '50px',
+            width: 'clamp(44px, 8vw, 50px)',
+            height: 'clamp(44px, 8vw, 50px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -1388,8 +1527,8 @@ function App() {
             background: 'rgba(255, 193, 7, 0.8)',
             border: 'none',
             borderRadius: '50%',
-            width: '50px',
-            height: '50px',
+            width: 'clamp(44px, 8vw, 50px)',
+            height: 'clamp(44px, 8vw, 50px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -1407,7 +1546,7 @@ function App() {
         top: '20px',
         left: '50%',
         transform: 'translateX(-50%)',
-        width: '300px',
+        width: 'min(90vw, 300px)',
         height: '4px',
         background: 'rgba(255, 255, 255, 0.2)',
         borderRadius: '2px',
@@ -1423,6 +1562,28 @@ function App() {
           animate={{ width: `${((currentSlide + 1) / totalSlides) * 100}%` }}
           transition={{ duration: 0.3 }}
         />
+      </div>
+
+      {/* Botón para ir a Bibliografía */}
+      <div style={{
+        position: 'absolute',
+        top: '20px',
+        right: '20px',
+        zIndex: 10
+      }}>
+        <button
+          onClick={() => setCurrentSlide(slides.length - 1)}
+          style={{
+            background: 'rgba(74, 144, 226, 0.85)',
+            border: 'none',
+            borderRadius: '20px',
+            padding: '0.5rem 1rem',
+            color: 'white',
+            cursor: 'pointer'
+          }}
+        >
+          Bibliografía
+        </button>
       </div>
     </div>
   )

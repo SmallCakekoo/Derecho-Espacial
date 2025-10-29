@@ -28,6 +28,19 @@
         width: 100vw;
         height: 100vh;
       }
+
+      /* Ocultar barras de scroll pero permitir desplazamiento */
+      /* Firefox */
+      * {
+        scrollbar-width: none;
+        -ms-overflow-style: none; /* IE y Edge heredado */
+      }
+      /* WebKit (Chrome, Edge Chromium, Safari, Opera) */
+      *::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        display: none;
+      }
     </style>
   </head>
   <body>
