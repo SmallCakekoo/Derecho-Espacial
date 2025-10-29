@@ -1435,6 +1435,13 @@ function App() {
 
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+      <style>
+        {`
+          @media (max-width: 640px) {
+            .qr-overlay { display: none !important; }
+          }
+        `}
+      </style>
       {/* Fondo espacial 3D - Se carga inmediatamente */}
       <SpaceBackground />
       
@@ -1588,7 +1595,7 @@ function App() {
       </div>
 
       {/* Overlay con QR (esquina inferior derecha) */}
-      <div style={{
+      <div className="qr-overlay" style={{
         position: 'absolute',
         right: '20px',
         bottom: '20px',
